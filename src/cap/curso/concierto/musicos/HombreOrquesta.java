@@ -1,7 +1,14 @@
 package cap.curso.concierto.musicos;
 
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import cap.curso.concierto.instrumentos.Instrumento;
 
+@Component("Federico")
 public class HombreOrquesta extends Musico {
 
 	@Override
@@ -15,4 +22,11 @@ public class HombreOrquesta extends Musico {
 		}
 	}
 
+	@Override
+	@Autowired
+	@Qualifier("tocameami")
+	public void setInstrumentos(Set<Instrumento> instrumentos) {
+		// TODO Auto-generated method stub
+		super.setInstrumentos(instrumentos);
+	}
 }

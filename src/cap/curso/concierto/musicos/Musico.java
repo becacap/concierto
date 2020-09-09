@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import cap.curso.concierto.instrumentos.Instrumento;
 
 public abstract class Musico implements MusicoInterface
