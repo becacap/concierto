@@ -22,4 +22,10 @@ public class Instrumento implements InstrumentoInterface
 		this.sonido = sonido;
 	}
 
+	@Override
+	public int compareTo(Instrumento o)
+	{
+		return this.getSonido().compareTo(o.getSonido());
+	}
+
 }
