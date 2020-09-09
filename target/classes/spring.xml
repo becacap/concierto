@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan
+		base-package="cap.curso.concierto.instrumentos"></context:component-scan>
+	<context:component-scan
+		base-package="cap.curso.concierto.musicos"></context:component-scan>
+
+<!--  
+	<bean class="cap.curso.concierto.instrumentos.Tambor" id="tambor">
+		<property name="sonido" value="bpom, pom, pom en xml"></property>
+	</bean>
+	<bean class="cap.curso.concierto.instrumentos.Trompeta"
+		id="trompeta">
+		<property name="sonido" value="atu, tu, tu en xml"></property>
+	</bean>
+	<bean class="cap.curso.concierto.instrumentos.Guitarra"
+		id="guitarra">
+		<property name="sonido" value="ctlan, tlan, tlan en xml"></property>
+	</bean>
+	<bean class="cap.curso.concierto.musicos.Solista" id="solista">
+		<property name="instrumento" ref="guitarra"></property>
+	</bean>
+	<bean class="cap.curso.concierto.musicos.HombreOrquesta"
+		id="federico">
+		<property name="instrumentos">
+			<list>
+				<ref bean="guitarra"></ref>
+				<ref bean="guitarra"></ref>
+				<ref bean="guitarra"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="guitarra"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+			</list>
+		</property>
+		<property name="instrumentosSet">
+			<set>
+				<ref bean="guitarra"></ref>
+				<ref bean="guitarra"></ref>
+				<ref bean="guitarra"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="tambor"></ref>
+				<ref bean="guitarra"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+				<ref bean="trompeta"></ref>
+			</set>
+		</property>
+	</bean>
+-->
+
+</beans>
