@@ -1,6 +1,6 @@
 package cap.curso.concierto.instrumentos;
 
-public class Instrumento implements InstrumentoInterface
+public class Instrumento implements InstrumentoInterface,Comparable<Instrumento>
 {
 
 	private String sonido;
@@ -24,13 +24,26 @@ public class Instrumento implements InstrumentoInterface
 		this.sonido = sonido;
 	}
 
-	//@Override
+	@Override
 	public int compareTo(Instrumento otro)
 	{
 		
-		return this.getSonido().compareTo(otro.getSonido());
+		return otro.getSonido().compareTo(this.getSonido());
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		Instrumento otro= (Instrumento) obj;
+		return this.getSonido().length()==otro.getSonido().length();
 	}
 
+	@Override
+	public int hashCode()
+	{
+		int resultado=this.getSonido().length();
+		return Integer.valueOf( resultado)+1;
+	}
 	
 	
 
