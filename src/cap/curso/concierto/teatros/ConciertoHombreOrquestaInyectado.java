@@ -22,7 +22,7 @@ public class ConciertoHombreOrquestaInyectado
 		MusicoInterface orquesta = (MusicoInterface) ctx.getBean("federico");		
 		try
 		{
-			orquesta.tocar();
+			orquesta.tocar(0);
 		} catch (SinSonidoException e)
 		{
 			// TODO Auto-generated catch block

@@ -10,7 +10,7 @@ public class Trompeta extends Instrumento
 {
 	
 	@Override
-	@Value("nada")
+	@Value("nadaj")
 	public void setSonido(String sonido)
 	{
 		// TODO Auto-generated method stub

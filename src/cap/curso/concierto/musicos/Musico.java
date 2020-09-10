@@ -16,7 +16,7 @@ public abstract class Musico implements MusicoInterface
 	private Set<Instrumento> instrumentos = new HashSet<>();
 	
 	@Override
-	public abstract void tocar() throws SinSonidoException;
+	public abstract void tocar(int estado) throws SinSonidoException;
 	
 	public Instrumento getInstrumento()
 	{

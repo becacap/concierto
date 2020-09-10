@@ -12,7 +12,7 @@ public class Solista extends Musico
 {
 
 	@Override
-	public void tocar() throws SinSonidoException
+	public void tocar(int estado) throws SinSonidoException
 	{
 		if (getInstrumento().getSonido().equals("nada"))
 			throw new SinSonidoException("El " + getInstrumento().getClass().getSimpleName() + " está roto.");

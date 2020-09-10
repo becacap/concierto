@@ -16,7 +16,7 @@ public class ConciertoSolista
 		solista.setInstrumento(tambor);
 		try
 		{
-			solista.tocar();
+			solista.tocar(0);
 		} catch (SinSonidoException e)
 		{
 			// TODO Auto-generated catch block

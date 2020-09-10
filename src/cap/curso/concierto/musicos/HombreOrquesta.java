@@ -25,7 +25,7 @@ public class HombreOrquesta extends Musico
 	@Override
 	@Vigilante
 	@Propietario
-	public void tocar() throws SinSonidoException
+	public void tocar(int estado) throws SinSonidoException
 	{
 		// TODO Auto-generated method stub
 		for (Instrumento instrumento : getInstrumentos()){

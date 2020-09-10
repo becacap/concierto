@@ -43,7 +43,7 @@ public class PropietarioDelTeatro
 
 		Musico musico = (Musico) joinPoint.getTarget();
 		Object salida = null;
-		
+
 		try
 		{
 
@@ -52,16 +52,17 @@ public class PropietarioDelTeatro
 			// Proceed ejecuta el método, de modo que todo lo de antes es @before
 			salida = joinPoint.proceed();
 			return salida;
-			
+
 			// Cuando termino de ejecutar y es correcto, After Returning, si es incorrecto
-			// y lanza una excepción, After Throwing, e independientemente del resultado, un After
+			// y lanza una excepción, After Throwing, e independientemente del resultado, un
+			// After
 
 			// AFTER RETURNING
 
 		} catch (Throwable e)
 		{
 			System.err.println(e.getMessage());
-			
+
 			// AFTER THROWING
 			if (musico instanceof Solista)
 			{
@@ -74,18 +75,18 @@ public class PropietarioDelTeatro
 				{
 					if (instrumento.getSonido().equals("nada"))
 						instrumento.setSonido("Sonido arreglado " + instrumento.getClass().getSimpleName());
-				}				
+				}
 			}
-			
+
 		} finally
 		{
-			
+
 		}
-		
+
 		// AFTER
-					System.out.println(ANSI_GREEN + "AFTER" + ANSI_RESET);
-					musico.tocar();
-					return salida;
+		System.out.println(ANSI_GREEN + "AFTER" + ANSI_RESET);
+		musico.tocar(0);
+		return salida;
 	}
 
 }
