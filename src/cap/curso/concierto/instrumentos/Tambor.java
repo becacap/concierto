@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Tambor extends Instrumento
 {
 	@Override
-	@Value("bpom pom pom con anotaciones")
+	// @Value("bpom pom pom con anotaciones")
 	public void setSonido(String sonido)
 	{
 		super.setSonido(sonido);

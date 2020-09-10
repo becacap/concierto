@@ -23,8 +23,8 @@ public class Configuracion
 	public HombreOrquesta getHombreOrquesta() {
 		HombreOrquesta hombreOrquesta = new HombreOrquesta();
 		
-		hombreOrquesta.getInstrumentos().add(getTambor());	
-		hombreOrquesta.getInstrumentos().add(getGuitarra());		
+		hombreOrquesta.getInstrumentos().add(getGuitarra());
+		hombreOrquesta.getInstrumentos().add(getTambor());			
 		hombreOrquesta.getInstrumentos().add(getTrompeta());
 		
 		return hombreOrquesta;
@@ -32,7 +32,9 @@ public class Configuracion
 	
 	@Bean//("tambor") no hace falta ponerlo porque por defecto es el nombre de la clase en minuscula
 	public Tambor getTambor() {
-		return new Tambor();
+		Tambor t = new Tambor();
+		t.setSonido("nada");
+		return t;
 	}
 	
 	@Bean

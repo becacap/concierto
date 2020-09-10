@@ -19,12 +19,12 @@ public class VigilanteDeAudiencia
 	
 	@Before("sujetador()") // es importante poner los parentesis
 	public void apagarMoviles() {
-		System.out.println("Señores apaguen los moviles que va a empezar el concierto");
+		System.out.println("· Señores apaguen los moviles que va a empezar el concierto");
 	}
 	
 	@After("sujetador()") 
 	public void encenderMoviles() {
-		System.out.println("El concierto ya ha terminado, ya pueden encender sus moviles");
+		System.out.println("· El concierto ya ha terminado, ya pueden encender sus moviles");
 	}
 	
 	
