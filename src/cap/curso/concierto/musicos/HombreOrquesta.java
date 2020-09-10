@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import cap.curso.concierto.anotaciones.Propietario;
+import cap.curso.concierto.anotaciones.Vigilante;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
@@ -14,7 +16,9 @@ public class HombreOrquesta extends Musico
 {
 
 	@Override
-	public void tocar() throws SinSonidoException
+//	@Vigilante
+	@Propietario
+	public void tocar(int estado) throws SinSonidoException
 	{
 		for (Instrumento instrumento : getInstrumentos())
 		{

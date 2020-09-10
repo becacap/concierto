@@ -4,6 +4,6 @@ import cap.curso.concierto.excepciones.SinSonidoException;
 
 public interface MusicoInterface
 {
-	public void tocar() throws SinSonidoException;
+	public void tocar(int estado) throws SinSonidoException;
 
 }
