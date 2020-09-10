@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import cap.curso.concierto.anotaciones.Vigilante;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
@@ -14,6 +15,7 @@ public class HombreOrquesta extends Musico
 {
 
 	@Override
+	@Vigilante
 	public void tocar() throws SinSonidoException
 	{
 		for (Instrumento instrumento : getInstrumentos())
@@ -21,6 +23,14 @@ public class HombreOrquesta extends Musico
 			if(instrumento.getSonido().equals("nada"))
 				throw new SinSonidoException("el "+instrumento.getClass().getSimpleName()+" esta roto");
 			System.out.println(instrumento.sonar());
+			try
+			{
+				Thread.sleep(10);
+			} catch (InterruptedException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}

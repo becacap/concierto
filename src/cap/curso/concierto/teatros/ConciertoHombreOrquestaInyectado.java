@@ -7,13 +7,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import cap.curso.concierto.configuracion.Configuracion;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.musicos.Musico;
+import cap.curso.concierto.musicos.MusicoInterface;
 
 public class ConciertoHombreOrquestaInyectado
 {
 	public static void main(String[] args)
 	{
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(Configuracion.class);
-		Musico federico = (Musico) ctx.getBean("federico");
+		MusicoInterface federico = (MusicoInterface) ctx.getBean("federico");
 		try
 		{
 			federico.tocar();
