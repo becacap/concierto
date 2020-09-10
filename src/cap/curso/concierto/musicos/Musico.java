@@ -8,6 +8,7 @@ import java.util.TreeSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
 public abstract class Musico implements MusicoInterface
@@ -15,7 +16,7 @@ public abstract class Musico implements MusicoInterface
 	private Instrumento instrumento;
 	private Set<Instrumento> instrumentos = new TreeSet<>();
 	@Override
-	public abstract void tocar();
+	public abstract void tocar() throws SinSonidoException;
 	public Instrumento getInstrumento()
 	{
 		return instrumento;

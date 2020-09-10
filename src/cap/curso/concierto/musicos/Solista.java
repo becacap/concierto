@@ -4,21 +4,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
-//@Component
+@Component
 public class Solista extends Musico
 {
 
 	@Override
-	public void tocar()
+	public void tocar() throws SinSonidoException
 	{
+		if (getInstrumento().getSonido().contentEquals("nada"))
+			throw new SinSonidoException("el "+getInstrumento().getClass().getSimpleName()+" esta roto");
 		System.out.println(getInstrumento().sonar());
 	}
 	
 	@Override
 	@Autowired
-	//@Qualifier("pepe")
+	@Qualifier("trompeta")
 	public void setInstrumento(Instrumento instrumento)
 	{
 		// TODO Auto-generated method stub

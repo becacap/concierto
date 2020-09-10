@@ -36,7 +36,7 @@ public class Configuracion
 		return guitarra;
 	}
 	
-	@Bean
+	@Bean(name = "trompeta")
 	public Trompeta getTrompeta() {
 		return new Trompeta();
 	}

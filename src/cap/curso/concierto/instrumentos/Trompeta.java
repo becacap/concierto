@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Trompeta extends Instrumento
 {
 	@Override
-	@Value("tuu, tuu, tuu con anotaciones")
+	@Value("nadaaaa")
 	public void setSonido(String sonido)
 	{
 		// TODO Auto-generated method stub
