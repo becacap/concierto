@@ -8,7 +8,7 @@
 	<context:annotation-config></context:annotation-config>
 	<context:component-scan base-package="cap.curso.concierto.instrumentos"></context:component-scan>
 	<context:component-scan base-package="cap.curso.concierto.musicos"></context:component-scan>
-	
+	<!--  <aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
 	
 	<!-- 
 	<bean class="cap.curso.concierto.instrumentos.Tambor"

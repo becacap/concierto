@@ -1,21 +1,22 @@
 package cap.curso.concierto.musicos;
 
+import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+//import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
+//import java.util.TreeSet;
 
 public abstract class Musico implements MusicoInterface
 {
 
 	private Instrumento instrumento;
-	private Set<Instrumento> instrumentos = new TreeSet<>();
+	private Set<Instrumento> instrumentos = new HashSet<>();
 	
 	@Override
-	public abstract void tocar();
+	public abstract void tocar() throws SinSonidoException;
 	
 	public Instrumento getInstrumento()
 	{

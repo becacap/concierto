@@ -2,10 +2,11 @@ package cap.curso.concierto.musicos;
 
 import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
 
+import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
 //@Component("federico")
@@ -13,10 +14,14 @@ public class HombreOrquesta extends Musico
 {
 
 	@Override
-	public void tocar()
+	public void tocar() throws SinSonidoException
 	{
 		// TODO Auto-generated method stub
 		for (Instrumento instrumento : getInstrumentos()){
+			
+			if (instrumento.getSonido().equals("nada"))
+				throw new SinSonidoException("El " + instrumento.getClass().getSimpleName() + " está roto.");
+				
 			System.out.println(instrumento.sonar());
 		}
 

@@ -1,8 +1,8 @@
 package cap.curso.concierto.instrumentos;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+//import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
 
 //@Component
 //@Qualifier("tocameami")
@@ -10,7 +10,7 @@ public class Tambor extends Instrumento
 {
 	
 	@Override
-	@Value("pom pom pom con anotaciones")
+	@Value("C pom pom pom con anotaciones")
 	public void setSonido(String sonido)
 	{
 		// TODO Auto-generated method stub

@@ -1,7 +1,7 @@
 package cap.curso.concierto.instrumentos;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.stereotype.Component;
 
 // Con @Component, Spring nos hace un new Guitarra y lo pone en memoria,
 // pudiendo así eliminar cosillas del xml
