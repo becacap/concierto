@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import cap.curso.concierto.instrumentos.Instrumento;
 
-@Component("federico")
+//@Component("federico")
 public class HombreOrquesta extends Musico
 {
 
@@ -23,12 +23,21 @@ public class HombreOrquesta extends Musico
 	}
 	
 	@Override
-	@Autowired
+	//@Autowired
 	@Qualifier("tocameami")
 	public void setInstrumentos(Set<Instrumento> instrumentos)
 	{
 		// TODO Auto-generated method stub
 		super.setInstrumentos(instrumentos);
+	}
+	
+	@Override
+	//@Autowired
+	@Qualifier("pepe")
+	public void setInstrumento(Instrumento instrumento)
+	{
+		// TODO Auto-generated method stub
+		super.setInstrumento(instrumento);
 	}
 
 }

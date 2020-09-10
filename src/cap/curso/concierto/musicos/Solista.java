@@ -17,8 +17,8 @@ public class Solista extends Musico
 	}
 	
 	@Override
-	@Autowired
-	@Qualifier("pepe")
+	//@Autowired
+	//@Qualifier("pepe")
 	public void setInstrumento(Instrumento instrumento)
 	{
 		// TODO Auto-generated method stub
