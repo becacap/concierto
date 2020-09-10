@@ -29,8 +29,8 @@ public class VigilanteDeAudiencia
 		
 	}*/
 	
-	@Pointcut("execution(* cap.curso.concierto.musicos.Musico.tocar(..))")
-	//@Pointcut("execution(@cap.curso.concierto.anotaciones.Vigilante * *.*.*.*(..))")
+	//@Pointcut("execution(* cap.curso.concierto.musicos.Musico.tocar(..))")
+	@Pointcut("execution(@cap.curso.concierto.anotaciones.Vigilante * *.*(..))")
 	public void sujetador() {
 		
 	}
