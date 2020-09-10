@@ -1,6 +1,6 @@
 package cap.curso.concierto.instrumentos;
 
-public interface InstrumentoInterface extends Comparable<Instrumento>
+public interface InstrumentoInterface
 {
 	public String sonar();
 }

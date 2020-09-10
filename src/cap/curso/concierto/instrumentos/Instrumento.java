@@ -1,6 +1,6 @@
 package cap.curso.concierto.instrumentos;
 
-public class Instrumento implements InstrumentoInterface
+public class Instrumento implements InstrumentoInterface, Comparable<Instrumento>
 {
 
 	private String sonido;

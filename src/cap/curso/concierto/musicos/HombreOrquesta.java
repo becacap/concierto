@@ -2,6 +2,9 @@ package cap.curso.concierto.musicos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -13,36 +16,40 @@ public class HombreOrquesta extends Musico
 {
 	
 	private List<Instrumento> instrumentos = new ArrayList<>();
-	// private Set<Instrumento> instrumentosSet = new TreeSet<Instrumento>();
-	
-	/*private Set<Instrumento> instrumentosSet = new TreeSet<Instrumento>(new Comparator<Instrumento>() {
-
-		@Override
-		public int compare(Instrumento o1, Instrumento o2)
-		{
-			int comparacion = o1.getSonido().compareTo(o2.getSonido());
-			int result = 0;
-			
-			if(comparacion < 0) result = 1;
-			else if(comparacion > 0) result = -1;
-			return result;
-		}
-		
-	});
-	*/
+	// private Set<Instrumento> instrumentosSet = new TreeSet<>();
 
 	@Override
 	public void tocar()
 	{
+		System.out.println("--- Instrumentos de su lista ---");
 		for(Instrumento i : this.getInstrumentos()) {
 			System.out.println(i.sonar());
 		}
 		
 		/*
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+		
+		Instrumento g1 = (Instrumento) ctx.getBean("tambor");
+		Instrumento g2 = (Instrumento) ctx.getBean("guitarra");
+		Instrumento g3 = (Instrumento) ctx.getBean("trompeta");
+		Instrumento g4 = (Instrumento) ctx.getBean("trompeta");
+		Instrumento g5 = (Instrumento) ctx.getBean("trompeta");
+
+		this.instrumentosSet.add(g1);
+		this.instrumentosSet.add(g2);
+		this.instrumentosSet.add(g3);
+		this.instrumentosSet.add(g4);
+		this.instrumentosSet.add(g5);
+		*/
+
+		/*
 		System.out.println();
+
+		System.out.println("--- Instrumentos de su set ---");
 		for(Instrumento i : this.getInstrumentosSet()) {
 			System.out.println(i.sonar());
-		}*/
+		}
+		*/
 	}
 	
 	public List<Instrumento> getInstrumentos()
@@ -50,8 +57,10 @@ public class HombreOrquesta extends Musico
 		return this.instrumentos;
 	}
 	
+	/*
 	@Autowired
 	@Qualifier("tocame a mi")
+	*/
 	public void setInstrumentos(List<Instrumento> l) {
 		this.instrumentos = l;
 	}
@@ -66,10 +75,13 @@ public class HombreOrquesta extends Musico
 		return instrumentosSet;
 	}
 
+	@Autowired
+	@Qualifier("tocame a mi")
 	public void setInstrumentosSet(Set<Instrumento> instrumentosSet)
 	{
 		this.instrumentosSet = instrumentosSet;
 	}
 	*/
+	
 
 }
