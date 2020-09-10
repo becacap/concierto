@@ -19,7 +19,7 @@ public class Configuracion
 	public HombreOrquesta getHombreOrquesta() {
 		HombreOrquesta hombreOrquesta = new HombreOrquesta();
 		
-		hombreOrquesta.getInstrumentos().add(getTambor());		
+		hombreOrquesta.getInstrumentos().add(getTambor());	
 		hombreOrquesta.getInstrumentos().add(getGuitarra());		
 		hombreOrquesta.getInstrumentos().add(getTrompeta());
 		
@@ -34,7 +34,7 @@ public class Configuracion
 	@Bean
 	public Guitarra getGuitarra() {
 		Guitarra guitarra = new Guitarra();
-		guitarra.setSonido("sonido puesto en clase");
+		guitarra.setSonido("nada");
 		return guitarra;
 	}
 	

@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import cap.curso.concierto.configuracion.Configuracion;
+import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.musicos.Musico;
 
 public class ConciertoHombreOrquestaInyectado
@@ -18,7 +19,14 @@ public class ConciertoHombreOrquestaInyectado
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(Configuracion.class);
 		
 		Musico hombreOrquesta = (Musico) ctx.getBean("federico");
-		hombreOrquesta.tocar();
+		try
+		{
+			hombreOrquesta.tocar();
+		} catch (SinSonidoException e)
+		{
+			System.err.println(e.getMessage());
+			// e.printStackTrace();
+		}
 	}
 
 }

@@ -2,6 +2,8 @@ package cap.curso.concierto.musicos;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
 // @Component("federico")
@@ -12,10 +14,13 @@ public class HombreOrquesta extends Musico
 	// private Set<Instrumento> instrumentosSet = new TreeSet<>();
 
 	@Override
-	public void tocar()
+	public void tocar() throws SinSonidoException
 	{
 		System.out.println("--- Instrumentos de su lista ---");
 		for(Instrumento i : this.getInstrumentos()) {
+			if(i.getSonido().equals("nada")) {
+				throw new SinSonidoException("El instrumento " + i.getClass().getSimpleName() + " esta roto");
+			}
 			System.out.println(i.sonar());
 		}
 		
