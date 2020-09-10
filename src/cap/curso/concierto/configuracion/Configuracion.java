@@ -1,6 +1,5 @@
 package cap.curso.concierto.configuracion;
 
-import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +17,13 @@ public class Configuracion
 	// Esto sustituye el autowire del metodo set de la clase HombreOrquesta
 	@Bean(name = "federico")
 	public HombreOrquesta getHombreOrquesta() {
-		return new HombreOrquesta();
+		HombreOrquesta hombreOrquesta = new HombreOrquesta();
+		
+		hombreOrquesta.getInstrumentos().add(getTambor());		
+		hombreOrquesta.getInstrumentos().add(getGuitarra());		
+		hombreOrquesta.getInstrumentos().add(getTrompeta());
+		
+		return hombreOrquesta;
 	}
 	
 	@Bean//("tambor") no hace falta ponerlo porque por defecto es el nombre de la clase en minuscula
@@ -33,6 +38,7 @@ public class Configuracion
 		return guitarra;
 	}
 	
+	@Bean // si no ponemos esta anotacion crea un objeto null si llamamos a este metodo
 	public Trompeta getTrompeta() {
 		return new Trompeta();
 	}

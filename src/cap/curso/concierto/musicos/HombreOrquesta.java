@@ -2,16 +2,9 @@ package cap.curso.concierto.musicos;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
 import cap.curso.concierto.instrumentos.Instrumento;
 
-@Component("federico")
+// @Component("federico")
 public class HombreOrquesta extends Musico
 {
 	
@@ -57,10 +50,9 @@ public class HombreOrquesta extends Musico
 		return this.instrumentos;
 	}
 	
-	/*
-	@Autowired
-	@Qualifier("tocame a mi")
-	*/
+	
+	// @Autowired
+	// @Qualifier("tocame a mi")
 	public void setInstrumentos(List<Instrumento> l) {
 		this.instrumentos = l;
 	}
