@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import cap.curso.concierto.anotaciones.Vigilante;
 import cap.curso.concierto.instrumentos.Instrumento;
 
 @Component
@@ -13,6 +14,7 @@ public class Solista extends Musico
 	private Instrumento instrumento;
 
 	@Override
+	@Vigilante
 	public void tocar()
 	{
 		System.out.println(this.getInstrumento().sonar());

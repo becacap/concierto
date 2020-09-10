@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 public class VigilanteDeAudiencia
 {
 
-	@Pointcut("execution(public void cap.curso.concierto.musicos.Musico.tocar(..))")
+	// @Pointcut("execution(public void cap.curso.concierto.musicos.Musico.tocar(..))")
+	@Pointcut("execution(@cap.curso.concierto.anotaciones.Vigilante * *.*(..))")
 	public void sujetador() {
 		
 	}

@@ -3,6 +3,7 @@ package cap.curso.concierto.musicos;
 import java.util.ArrayList;
 import java.util.List;
 
+import cap.curso.concierto.anotaciones.Vigilante;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
@@ -14,6 +15,7 @@ public class HombreOrquesta extends Musico
 	// private Set<Instrumento> instrumentosSet = new TreeSet<>();
 
 	@Override
+	@Vigilante
 	public void tocar() throws SinSonidoException
 	{
 		System.out.println("--- Instrumentos de su lista ---");
