@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import cap.curso.concierto.configuracion.Configuracion;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.musicos.Musico;
+import cap.curso.concierto.musicos.MusicoInterface;
 
 public class ConciertoHombreOrquestaInyectado
 {
@@ -18,7 +19,7 @@ public class ConciertoHombreOrquestaInyectado
 		// Con una clase de configuracion con anotaciones para quitar ese apartado en el xml
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(Configuracion.class);
 		
-		Musico hombreOrquesta = (Musico) ctx.getBean("federico");
+		MusicoInterface hombreOrquesta = (MusicoInterface) ctx.getBean("federico");
 		try
 		{
 			hombreOrquesta.tocar();

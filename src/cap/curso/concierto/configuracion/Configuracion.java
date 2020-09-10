@@ -3,6 +3,7 @@ package cap.curso.concierto.configuracion;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import cap.curso.concierto.instrumentos.Guitarra;
 import cap.curso.concierto.instrumentos.Tambor;
@@ -10,7 +11,10 @@ import cap.curso.concierto.instrumentos.Trompeta;
 import cap.curso.concierto.musicos.HombreOrquesta;
 
 @Configuration
-@ComponentScan({"cap.curso.concierto.instrumentos", "cap.curso.concierto.musicos"})
+@ComponentScan({"cap.curso.concierto.instrumentos",
+				"cap.curso.concierto.musicos",
+				"cap.curso.concierto.aspectos"})
+@EnableAspectJAutoProxy
 public class Configuracion
 {
 
