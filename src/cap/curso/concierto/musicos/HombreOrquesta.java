@@ -18,7 +18,7 @@ public class HombreOrquesta extends Musico
 	@Override
 	//@Vigilante
 	@Propietario
-	public void tocar(int esatdo) throws SinSonidoException
+	public void tocar(int estado) throws SinSonidoException
 	{
 		for (Instrumento instrumento : getInstrumentos())
 		{
