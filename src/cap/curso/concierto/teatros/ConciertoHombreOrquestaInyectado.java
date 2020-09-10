@@ -17,7 +17,7 @@ public class ConciertoHombreOrquestaInyectado
 		MusicoInterface federico = (MusicoInterface) ctx.getBean("federico");
 		try
 		{
-			federico.tocar();
+			federico.tocar(1);
 		} catch (SinSonidoException e)
 		{
 			System.err.println(e.getMessage());

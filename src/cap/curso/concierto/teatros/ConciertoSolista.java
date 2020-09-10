@@ -16,7 +16,7 @@ public class ConciertoSolista
 		solista.setInstrumento(tambor);
 		try
 		{
-			solista.tocar();
+			solista.tocar(1);
 		} catch (SinSonidoException e)
 		{
 			System.err.println(e.getMessage());

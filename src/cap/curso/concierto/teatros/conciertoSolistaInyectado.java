@@ -18,7 +18,7 @@ public class conciertoSolistaInyectado
 		MusicoInterface solista = (MusicoInterface) ctx.getBean("solista");
 		try
 		{
-			solista.tocar();
+			solista.tocar(1);
 		} catch (SinSonidoException e)
 		{
 			System.err.println(e.getMessage());

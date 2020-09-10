@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import cap.curso.concierto.anotaciones.Propietario;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
@@ -12,7 +13,8 @@ public class Solista extends Musico
 {
 
 	@Override
-	public void tocar() throws SinSonidoException
+	@Propietario
+	public void tocar(int estado) throws SinSonidoException
 	{
 		if (getInstrumento().getSonido().contentEquals("nada"))
 			throw new SinSonidoException("el "+getInstrumento().getClass().getSimpleName()+" esta roto");
