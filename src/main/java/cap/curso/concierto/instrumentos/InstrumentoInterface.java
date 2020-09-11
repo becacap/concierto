@@ -1,4 +1,4 @@
-package main.java.cap.curso.concierto.instrumentos;
+package cap.curso.concierto.instrumentos;
 
 public interface InstrumentoInterface
 {

@@ -1,4 +1,4 @@
-package main.java.cap.curso.concierto.anotaciones;
+package cap.curso.concierto.anotaciones;
 
 public @interface Vigilante
 {

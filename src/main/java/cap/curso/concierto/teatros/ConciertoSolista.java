@@ -1,8 +1,8 @@
-package main.java.cap.curso.concierto.teatros;
+package cap.curso.concierto.teatros;
 
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
-import main.java.cap.curso.concierto.instrumentos.Instrumento;
-import main.java.cap.curso.concierto.musicos.Solista;
+import cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.instrumentos.Instrumento;
+import cap.curso.concierto.musicos.Solista;
 
 public class ConciertoSolista
 {

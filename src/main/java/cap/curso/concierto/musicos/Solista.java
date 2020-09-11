@@ -1,12 +1,12 @@
-package main.java.cap.curso.concierto.musicos;
+package cap.curso.concierto.musicos;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import main.java.cap.curso.concierto.anotaciones.Propietario;
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
-import main.java.cap.curso.concierto.instrumentos.Instrumento;
+import cap.curso.concierto.anotaciones.Propietario;
+import cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.instrumentos.Instrumento;
 
 @Component
 public class Solista extends Musico

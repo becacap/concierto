@@ -1,4 +1,4 @@
-package main.java.cap.curso.concierto.instrumentos;
+package cap.curso.concierto.instrumentos;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

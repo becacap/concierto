@@ -1,11 +1,11 @@
-package main.java.cap.curso.concierto.musicos;
+package cap.curso.concierto.musicos;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.cap.curso.concierto.anotaciones.Propietario;
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
-import main.java.cap.curso.concierto.instrumentos.Instrumento;
+import cap.curso.concierto.anotaciones.Propietario;
+import cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.instrumentos.Instrumento;
 
 // @Component("federico")
 public class HombreOrquesta extends Musico

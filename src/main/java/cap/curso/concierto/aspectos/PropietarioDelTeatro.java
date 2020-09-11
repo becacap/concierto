@@ -1,4 +1,4 @@
-package main.java.cap.curso.concierto.aspectos;
+package cap.curso.concierto.aspectos;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -6,18 +6,18 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
-import main.java.cap.curso.concierto.instrumentos.Instrumento;
-import main.java.cap.curso.concierto.musicos.HombreOrquesta;
-import main.java.cap.curso.concierto.musicos.Musico;
-import main.java.cap.curso.concierto.musicos.Solista;
+import cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.instrumentos.Instrumento;
+import cap.curso.concierto.musicos.HombreOrquesta;
+import cap.curso.concierto.musicos.Musico;
+import cap.curso.concierto.musicos.Solista;
 
 @Aspect
 @Component
 public class PropietarioDelTeatro
 {
 
-	@Pointcut("execution(@main.java.cap.curso.concierto.anotaciones.Propietario * *.*(..))")
+	@Pointcut("execution(@cap.curso.concierto.anotaciones.Propietario * *.*(..))")
 	public void sujetador() {
 		
 	}

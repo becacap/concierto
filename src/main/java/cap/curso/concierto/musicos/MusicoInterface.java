@@ -1,6 +1,6 @@
-package main.java.cap.curso.concierto.musicos;
+package cap.curso.concierto.musicos;
 
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.excepciones.SinSonidoException;
 
 public interface MusicoInterface
 {

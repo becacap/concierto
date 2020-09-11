@@ -1,4 +1,4 @@
-package main.java.cap.curso.concierto.aspectos;
+package cap.curso.concierto.aspectos;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,7 +12,7 @@ public class VigilanteDeAudiencia
 {
 
 	// @Pointcut("execution(public void cap.curso.concierto.musicos.Musico.tocar(..))")
-	@Pointcut("execution(@main.java.cap.curso.concierto.anotaciones.Vigilante * *.*(..))")
+	@Pointcut("execution(@cap.curso.concierto.anotaciones.Vigilante * *.*(..))")
 	public void sujetador() {
 		
 	}

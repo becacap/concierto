@@ -1,8 +1,8 @@
-package main.java.cap.curso.concierto.musicos;
+package cap.curso.concierto.musicos;
 
 import org.springframework.stereotype.Component;
 
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.excepciones.SinSonidoException;
 
 @Component
 public abstract class Musico implements MusicoInterface

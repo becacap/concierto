@@ -1,19 +1,19 @@
-package main.java.cap.curso.concierto.configuracion;
+package cap.curso.concierto.configuracion;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-import main.java.cap.curso.concierto.instrumentos.Guitarra;
-import main.java.cap.curso.concierto.instrumentos.Tambor;
-import main.java.cap.curso.concierto.instrumentos.Trompeta;
-import main.java.cap.curso.concierto.musicos.HombreOrquesta;
+import cap.curso.concierto.instrumentos.Guitarra;
+import cap.curso.concierto.instrumentos.Tambor;
+import cap.curso.concierto.instrumentos.Trompeta;
+import cap.curso.concierto.musicos.HombreOrquesta;
 
 @Configuration
-@ComponentScan({"main.java.cap.curso.concierto.instrumentos",
-				"main.java.cap.curso.concierto.musicos",
-				"main.java.cap.curso.concierto.aspectos"})
+@ComponentScan({"cap.curso.concierto.instrumentos",
+				"cap.curso.concierto.musicos",
+				"cap.curso.concierto.aspectos"})
 @EnableAspectJAutoProxy
 public class Configuracion
 {

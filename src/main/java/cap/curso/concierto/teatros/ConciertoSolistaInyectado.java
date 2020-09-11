@@ -1,11 +1,11 @@
-package main.java.cap.curso.concierto.teatros;
+package cap.curso.concierto.teatros;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import main.java.cap.curso.concierto.configuracion.Configuracion;
-import main.java.cap.curso.concierto.excepciones.SinSonidoException;
-import main.java.cap.curso.concierto.musicos.MusicoInterface;
+import cap.curso.concierto.configuracion.Configuracion;
+import cap.curso.concierto.excepciones.SinSonidoException;
+import cap.curso.concierto.musicos.MusicoInterface;
 
 public class ConciertoSolistaInyectado
 {

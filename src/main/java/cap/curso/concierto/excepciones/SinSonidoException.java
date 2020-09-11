@@ -1,4 +1,4 @@
-package main.java.cap.curso.concierto.excepciones;
+package cap.curso.concierto.excepciones;
 
 @SuppressWarnings("serial")
 public class SinSonidoException extends Exception
