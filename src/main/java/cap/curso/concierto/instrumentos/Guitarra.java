@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Guitarra extends Instrumento
 {
 	@Override
-	@Value("nada")
+	// @Value("nada")
 	public void setSonido(String sonido)
 	{
 		super.setSonido(sonido);

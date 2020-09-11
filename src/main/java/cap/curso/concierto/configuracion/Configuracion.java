@@ -9,6 +9,7 @@ import cap.curso.concierto.instrumentos.Guitarra;
 import cap.curso.concierto.instrumentos.Tambor;
 import cap.curso.concierto.instrumentos.Trompeta;
 import cap.curso.concierto.musicos.HombreOrquesta;
+import cap.curso.concierto.musicos.Solista;
 
 @Configuration
 @ComponentScan({"cap.curso.concierto.instrumentos",
@@ -33,20 +34,24 @@ public class Configuracion
 	@Bean//("tambor") no hace falta ponerlo porque por defecto es el nombre de la clase en minuscula
 	public Tambor getTambor() {
 		Tambor t = new Tambor();
-		t.setSonido("nada");
+		t.setSonido("sonido de tambor");
 		return t;
 	}
 	
 	@Bean
 	public Guitarra getGuitarra() {
-		Guitarra guitarra = new Guitarra();
-		guitarra.setSonido("nada");
-		return guitarra;
+		Guitarra g = new Guitarra();
+		g.setSonido("nada");
+		return g;
 	}
 	
-	@Bean // si no ponemos esta anotacion crea un objeto null si llamamos a este metodo
+	// si no ponemos @Bean esta anotacion crea un objeto null si llamamos a este metodo
+	@Bean
 	public Trompeta getTrompeta() {
-		return new Trompeta();
+		Trompeta t = new Trompeta();
+		t.setSonido("sonido de trompeta");
+		return t;
 	}
+	
 	
 }

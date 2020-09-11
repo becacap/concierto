@@ -13,12 +13,14 @@ public class Solista extends Musico
 {
 
 	private Instrumento instrumento;
+	private Instrumento instrumento2;
 
 	@Override
 	@Propietario
 	public void tocar() throws SinSonidoException
 	{
-		if(this.getInstrumento().getSonido().equals("nada")) {
+		if (this.getInstrumento().getSonido().equals("nada"))
+		{
 			throw new SinSonidoException("El instrumento esta roto");
 		}
 		System.out.println(this.getInstrumento().sonar());
@@ -31,14 +33,27 @@ public class Solista extends Musico
 
 	// Automaticamente cada vez que se haga una instancia de un musico
 	// tendra guitarra de valor por defecto en el instrumento
-	/* 
-	 * Por defecto el nombre de la clase en minuscula o si no el que nosotros le demos a la anotacion @Component
+	/*
+	 * Por defecto el nombre de la clase en minuscula o si no el que nosotros le
+	 * demos a la anotacion @Component
 	 */
 	@Autowired
 	@Qualifier("guitarra")
 	public void setInstrumento(Instrumento instrumento)
 	{
 		this.instrumento = instrumento;
+	}
+
+	public Instrumento getInstrumento2()
+	{
+		return instrumento2;
+	}
+
+	@Autowired
+	@Qualifier("guitarra")
+	public void setInstrumento2(Instrumento instrumento)
+	{
+		instrumento2 = instrumento;
 	}
 
 }
