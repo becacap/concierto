@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
-@Qualifier("tocameami")
+//@Component
+//@Qualifier("tocameami")
 public class Tambor extends Instrumento
 {
 	@Override
